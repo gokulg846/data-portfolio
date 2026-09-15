@@ -1,12 +1,6 @@
 import { projects } from '../content/projects';
+import { analyticsHighlights, technicalCapabilities, technicalExperience } from '../content/experience';
 import { sitePath } from '../lib/site-path';
-
-const impact = [
-  ["10,000+", "industrial sensors supported by analytics workflows"],
-  ["25%", "reduction in equipment downtime"],
-  ["80%", "faster engineering-document retrieval"],
-  ["20+ hrs", "manual analysis removed each week"],
-];
 
 export default function Home() {
   return (
@@ -18,7 +12,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
-          <a href="mailto:gokulg846@gmail.com">Contact</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
 
@@ -43,14 +37,18 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">View projects <span>↓</span></a>
-              <a className="button" href="#experience">Career impact <span>↓</span></a>
+              <a className="button" href="#experience">Career experience <span>↓</span></a>
               <a className="text-link" href="mailto:gokulg846@gmail.com">Email me ↗</a>
             </div>
           </div>
         </div>
-        <div className="system-flow" aria-label="Data product workflow">
-          {['INGEST', 'TRANSFORM', 'MODEL', 'EVALUATE', 'SERVE'].map((step, index) => (
-            <div key={step}><span>0{index + 1}</span><strong>{step}</strong></div>
+        <div className="analytics-rail" aria-label="Selected analytics work">
+          {analyticsHighlights.map((item) => (
+            <article key={item.title}>
+              <strong>{item.metric}</strong>
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+            </article>
           ))}
         </div>
       </header>
@@ -68,22 +66,42 @@ export default function Home() {
               <p className="project-summary">{project.summary}</p>
               <p className="project-detail">{project.detail}</p>
               <ul>{project.stack.map((item) => <li key={item}>{item}</li>)}</ul>
-              <a href={sitePath(`/projects/${project.slug}/`)} aria-label={`Read the ${project.title} case study`}>Read case study <span>↗</span></a>
+              <div className="project-links">
+                <a href={sitePath(`/projects/${project.slug}/`)} aria-label={`Show more details about ${project.title}`}>Show more details <span>→</span></a>
+                <a href={project.repository} target="_blank" rel="noreferrer" aria-label={`Open ${project.title} on GitHub`}>GitHub <span>↗</span></a>
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="impact" id="experience" aria-labelledby="impact-title">
-        <div className="impact-intro">
-          <p className="eyebrow">CAREER IMPACT</p>
-          <h2 id="impact-title">Data work measured in operating outcomes.</h2>
-          <p>Experience across industrial analytics, engineering automation, computer vision, and enterprise AI systems.</p>
+      <section className="experience" id="experience" aria-labelledby="experience-title">
+        <div className="experience-heading">
+          <div>
+            <p className="eyebrow">TECHNICAL EXPERIENCE</p>
+            <h2 id="experience-title">The analysis behind the outcomes.</h2>
+          </div>
+          <p>Production pipelines, statistical analysis, machine learning, experimentation, and AI evaluation across consulting, manufacturing, research, and startups.</p>
         </div>
-        <div className="impact-grid">
-          {impact.map(([metric, description]) => (
-            <div key={metric}><strong>{metric}</strong><p>{description}</p></div>
+        <div className="experience-list">
+          {technicalExperience.map((entry) => (
+            <article key={entry.company}>
+              <header><div><p>{entry.company}</p><h3>{entry.role}</h3></div><span>{entry.period}</span></header>
+              <p className="experience-summary">{entry.summary}</p>
+              <ul className="experience-work">{entry.work.map((item) => <li key={item}>{item}</li>)}</ul>
+              <ul className="experience-stack">{entry.stack.map((item) => <li key={item}>{item}</li>)}</ul>
+            </article>
           ))}
+        </div>
+      </section>
+
+      <section className="capabilities" aria-labelledby="capabilities-title">
+        <div>
+          <p className="eyebrow">TECHNICAL RANGE</p>
+          <h2 id="capabilities-title">Built across the data stack.</h2>
+        </div>
+        <div className="capability-grid">
+          {technicalCapabilities.map(([title, description]) => <article key={title}><h3>{title}</h3><p>{description}</p></article>)}
         </div>
       </section>
 
