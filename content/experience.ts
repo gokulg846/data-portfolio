@@ -91,10 +91,7 @@ export const technologyIcons = [
   ['PyTorch', 'pytorch'],
   ['TensorFlow', 'tensorflow'],
   ['Apache Kafka', 'apachekafka'],
-  ['dbt', 'dbt'],
-  ['AWS', 'amazonwebservices'],
   ['Docker', 'docker'],
-  ['Power BI', 'powerbi'],
 ];
 
 export const technicalCapabilities = [
