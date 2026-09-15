@@ -102,8 +102,7 @@ export default function Home() {
           <div className="technology-icons" aria-label="Technologies used">
             {technologyIcons.map(([name, slug]) => (
               <div key={name} title={name}>
-                <img src={`https://cdn.simpleicons.org/${slug}`} alt="" aria-hidden="true" />
-                <span>{name}</span>
+                <img src={`https://cdn.simpleicons.org/${slug}`} alt={name} loading="lazy" />
               </div>
             ))}
           </div>
