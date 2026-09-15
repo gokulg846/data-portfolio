@@ -101,7 +101,7 @@ export default function Home() {
           <h2 id="capabilities-title">Built across the data stack.</h2>
           <div className="technology-icons" aria-label="Technologies used">
             {technologyIcons.map(([name, slug]) => (
-              <div key={name} title={name}>
+              <div key={name} data-label={name} tabIndex={0} aria-label={name}>
                 <img src={`https://cdn.simpleicons.org/${slug}`} alt={name} loading="lazy" />
               </div>
             ))}
