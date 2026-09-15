@@ -1,6 +1,14 @@
 import { projects } from '../content/projects';
 import { analyticsHighlights, technicalCapabilities, technicalExperience, technologyIcons } from '../content/experience';
 import { sitePath } from '../lib/site-path';
+import { BrainCircuit, Network, Search, ShieldCheck } from 'lucide-react';
+
+const aiCapabilities = [
+  ['LLM evaluation', BrainCircuit],
+  ['Retrieval-augmented generation', Search],
+  ['Model Context Protocol', Network],
+  ['AI governance', ShieldCheck],
+] as const;
 
 export default function Home() {
   return (
@@ -103,6 +111,11 @@ export default function Home() {
             {technologyIcons.map(([name, slug]) => (
               <div key={name} data-label={name} tabIndex={0} aria-label={name}>
                 <img src={`https://cdn.simpleicons.org/${slug}`} alt={name} loading="lazy" />
+              </div>
+            ))}
+            {aiCapabilities.map(([name, Icon]) => (
+              <div className="ai-capability-icon" key={name} data-label={name} tabIndex={0} aria-label={name}>
+                <Icon aria-hidden="true" />
               </div>
             ))}
           </div>
