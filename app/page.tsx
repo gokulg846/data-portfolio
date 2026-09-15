@@ -1,5 +1,5 @@
 import { projects } from '../content/projects';
-import { analyticsHighlights, technicalCapabilities, technicalExperience } from '../content/experience';
+import { analyticsHighlights, technicalCapabilities, technicalExperience, technologyIcons } from '../content/experience';
 import { sitePath } from '../lib/site-path';
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">View projects <span>↓</span></a>
               <a className="button" href="#experience">Career experience <span>↓</span></a>
-              <a className="text-link" href="mailto:gokulg846@gmail.com">Email me ↗</a>
+              <a className="button" href="mailto:gokulg846@gmail.com">Email me <span>↗</span></a>
             </div>
           </div>
         </div>
@@ -99,6 +99,14 @@ export default function Home() {
         <div>
           <p className="eyebrow">TECHNICAL RANGE</p>
           <h2 id="capabilities-title">Built across the data stack.</h2>
+          <div className="technology-icons" aria-label="Technologies used">
+            {technologyIcons.map(([name, slug]) => (
+              <div key={name} title={name}>
+                <img src={`https://cdn.simpleicons.org/${slug}`} alt="" aria-hidden="true" />
+                <span>{name}</span>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="capability-grid">
           {technicalCapabilities.map(([title, description]) => <article key={title}><h3>{title}</h3><p>{description}</p></article>)}

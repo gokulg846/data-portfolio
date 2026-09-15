@@ -23,18 +23,6 @@ export const analyticsHighlights = [
 
 export const technicalExperience = [
   {
-    company: 'Accenture',
-    role: 'Analyst, Data & Analytics',
-    period: '2021 to 2023',
-    summary: 'Built industrial data pipelines and predictive analytics that converted high-frequency equipment signals into earlier failure indicators.',
-    work: [
-      'Deployed ETL pipelines with Python, SQL, BigQuery, S3, and Redshift to ingest, transform, and serve industrial IoT data.',
-      'Developed real-time analytics and machine-learning pipelines in Pandas and scikit-learn for more than 10,000 sensors.',
-      'Automated recurring data retrieval and reporting, reducing report-generation time by 15%.',
-    ],
-    stack: ['Python', 'SQL', 'Pandas', 'scikit-learn', 'BigQuery', 'S3', 'Redshift'],
-  },
-  {
     company: 'RisingPhoenix.ai',
     role: 'AI Product Engineer Intern',
     period: '2026 to present',
@@ -45,18 +33,6 @@ export const technicalExperience = [
       'Built reusable control-mapping knowledge across OWASP, CIS, and ISO standards.',
     ],
     stack: ['Document classification', 'LLM inference', 'Evaluation harnesses', 'RAG', 'Control mapping'],
-  },
-  {
-    company: 'The Data Mine at Purdue',
-    role: 'Graduate Data Science Researcher',
-    period: 'Graduate research',
-    summary: 'Analyzed customer touchpoints to identify the model drivers associated with pharma marketing conversion.',
-    work: [
-      'Built end-to-end machine-learning workflows with PyTorch and XGBoost.',
-      'Conducted sensitivity analysis to identify the inputs with the strongest influence on conversion outcomes.',
-      'Designed Power BI dashboards to communicate findings to stakeholders.',
-    ],
-    stack: ['PyTorch', 'XGBoost', 'Sensitivity analysis', 'Power BI'],
   },
   {
     company: 'Cummins',
@@ -71,6 +47,30 @@ export const technicalExperience = [
     stack: ['MATLAB', 'Data validation', 'Automated visualization', 'RAG', 'Document retrieval'],
   },
   {
+    company: 'The Data Mine at Purdue',
+    role: 'Graduate Data Science Researcher',
+    period: 'Graduate research',
+    summary: 'Analyzed customer touchpoints to identify the model drivers associated with pharma marketing conversion.',
+    work: [
+      'Built end-to-end machine-learning workflows with PyTorch and XGBoost.',
+      'Conducted sensitivity analysis to identify the inputs with the strongest influence on conversion outcomes.',
+      'Designed Power BI dashboards to communicate findings to stakeholders.',
+    ],
+    stack: ['PyTorch', 'XGBoost', 'Sensitivity analysis', 'Power BI'],
+  },
+  {
+    company: 'Accenture',
+    role: 'Analyst, Data & Analytics',
+    period: '2021 to 2023',
+    summary: 'Built industrial data pipelines and predictive analytics that converted high-frequency equipment signals into earlier failure indicators.',
+    work: [
+      'Deployed ETL pipelines with Python, SQL, BigQuery, S3, and Redshift to ingest, transform, and serve industrial IoT data.',
+      'Developed real-time analytics and machine-learning pipelines in Pandas and scikit-learn for more than 10,000 sensors.',
+      'Automated recurring data retrieval and reporting, reducing report-generation time by 15%.',
+    ],
+    stack: ['Python', 'SQL', 'Pandas', 'scikit-learn', 'BigQuery', 'S3', 'Redshift'],
+  },
+  {
     company: 'LawSikho',
     role: 'Data Analyst Intern',
     period: '2020',
@@ -82,6 +82,19 @@ export const technicalExperience = [
     ],
     stack: ['SQL', 'A/B testing', 'Attribution modeling', 'Funnel analysis', 'KPI reporting'],
   },
+];
+
+export const technologyIcons = [
+  ['Python', 'python'],
+  ['Pandas', 'pandas'],
+  ['scikit-learn', 'scikitlearn'],
+  ['PyTorch', 'pytorch'],
+  ['TensorFlow', 'tensorflow'],
+  ['Apache Kafka', 'apachekafka'],
+  ['dbt', 'dbt'],
+  ['AWS', 'amazonwebservices'],
+  ['Docker', 'docker'],
+  ['Power BI', 'powerbi'],
 ];
 
 export const technicalCapabilities = [
