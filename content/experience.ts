@@ -1,8 +1,8 @@
 export const analyticsHighlights = [
   {
-    metric: '10,000+',
-    title: 'Industrial sensor analytics',
-    description: 'Built ETL, real-time analytics, and machine-learning pipelines for early-failure detection across high-frequency IoT data.',
+    metric: '25%',
+    title: 'Predictive maintenance',
+    description: 'Reduced equipment downtime with real-time analytics and machine-learning pipelines spanning more than 10,000 industrial sensors.',
   },
   {
     metric: '8%',
@@ -15,9 +15,9 @@ export const analyticsHighlights = [
     description: 'Applied XGBoost and sensitivity analysis to customer-touchpoint data for pharma marketing conversion.',
   },
   {
-    metric: '20+ hrs',
-    title: 'Analysis automation',
-    description: 'Migrated test-data analysis from Excel to MATLAB and automated engineering visualizations and validation checks.',
+    metric: '80%',
+    title: 'Engineering knowledge retrieval',
+    description: 'Built and released a RAG system that accelerated technical-document retrieval for engineering teams.',
   },
 ];
 
