@@ -52,11 +52,12 @@ export default function Home() {
         </div>
         <div className="analytics-rail" aria-label="Selected analytics work">
           {analyticsHighlights.map((item) => (
-            <article key={item.title}>
+            <a href={`#${item.destination}`} key={item.title}>
               <strong>{item.metric}</strong>
               <h2>{item.title}</h2>
               <p>{item.description}</p>
-            </article>
+              <span className="impact-jump" aria-hidden="true">↓</span>
+            </a>
           ))}
         </div>
       </header>
@@ -93,7 +94,7 @@ export default function Home() {
         </div>
         <div className="experience-list">
           {technicalExperience.map((entry) => (
-            <article key={entry.company}>
+            <article id={entry.id} key={entry.company}>
               <header><div><p>{entry.company}</p><h3>{entry.role}</h3></div><span>{entry.period}</span></header>
               <p className="experience-summary">{entry.summary}</p>
               <ul className="experience-work">{entry.work.map((item) => <li key={item}>{item}</li>)}</ul>

@@ -1,28 +1,33 @@
 export const analyticsHighlights = [
   {
     metric: '25%',
-    title: 'Predictive maintenance',
+    title: 'reduction in equipment downtime',
     description: 'Reduced equipment downtime with real-time analytics and machine-learning pipelines spanning more than 10,000 industrial sensors.',
+    destination: 'experience-accenture',
   },
   {
     metric: '8%',
-    title: 'Experimentation and attribution',
+    title: 'increase in conversion rate',
     description: 'Used A/B testing, attribution modeling, and SQL trend analysis to improve conversion across a candidate journey.',
+    destination: 'experience-lawsikho',
   },
   {
     metric: '15%',
-    title: 'Predictive modeling',
+    title: 'improvement in pharma marketing conversion',
     description: 'Applied XGBoost and sensitivity analysis to customer-touchpoint data for pharma marketing conversion.',
+    destination: 'experience-data-mine',
   },
   {
     metric: '80%',
-    title: 'Engineering knowledge retrieval',
+    title: 'faster engineering-document retrieval',
     description: 'Built and released a RAG system that accelerated technical-document retrieval for engineering teams.',
+    destination: 'experience-cummins',
   },
 ];
 
 export const technicalExperience = [
   {
+    id: 'experience-risingphoenix',
     company: 'RisingPhoenix.ai',
     role: 'AI Product Engineer Intern',
     period: '2026 to present',
@@ -35,6 +40,7 @@ export const technicalExperience = [
     stack: ['Document classification', 'LLM inference', 'Evaluation harnesses', 'RAG', 'Control mapping'],
   },
   {
+    id: 'experience-cummins',
     company: 'Cummins',
     role: 'Product Engineer Co-op',
     period: '2025 to 2026',
@@ -47,6 +53,7 @@ export const technicalExperience = [
     stack: ['MATLAB', 'Data validation', 'Automated visualization', 'RAG', 'Document retrieval'],
   },
   {
+    id: 'experience-data-mine',
     company: 'The Data Mine at Purdue',
     role: 'Graduate Data Science Researcher',
     period: 'Graduate research',
@@ -59,6 +66,7 @@ export const technicalExperience = [
     stack: ['PyTorch', 'XGBoost', 'Sensitivity analysis', 'Power BI'],
   },
   {
+    id: 'experience-accenture',
     company: 'Accenture',
     role: 'Analyst, Data & Analytics',
     period: '2021 to 2023',
@@ -71,6 +79,7 @@ export const technicalExperience = [
     stack: ['Python', 'SQL', 'Pandas', 'scikit-learn', 'BigQuery', 'S3', 'Redshift'],
   },
   {
+    id: 'experience-lawsikho',
     company: 'LawSikho',
     role: 'Data Analyst Intern',
     period: '2020',
